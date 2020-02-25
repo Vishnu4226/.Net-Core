@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TypeScriptToolsVersion>3.5</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Admin\Data\**" />
+    <Content Remove="Areas\Admin\Data\**" />
+    <EmbeddedResource Remove="Areas\Admin\Data\**" />
+    <None Remove="Areas\Admin\Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Kentico.AspNetCore.LocalizedRouting" Version="1.0.0-beta1" />
+    <PackageReference Include="Kentico.Kontent.Management.Helpers" Version="2.1.0" />
+    <PackageReference Include="Kentico.Kontent.Delivery" Version="13.0.1-beta6" />
+    <PackageReference Include="Kentico.Kontent.Recommender" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.0.96" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\SelfConfig\" />
+    <Folder Include="Areas\Admin\Views\Shared\EditorTemplates\" />
+    <Folder Include="wwwroot\css\admin\" />
+    <Folder Include="wwwroot\images\Admin\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Update="UrlRewrite.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

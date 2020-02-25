@@ -1,0 +1,11 @@
+﻿@model DancingGoat.Models.AboutUsViewModel
+
+@inject IConfiguration Configuration
+@{
+    ViewBag.Title = Localizer["AboutUs"];
+}
+
+@Html.DisplayForModel()
+@{
+    await Html.EditPanelAsync(Configuration, Model.ItemId, Model.Language);
+}
